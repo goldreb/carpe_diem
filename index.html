@@ -5,105 +5,74 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Carpe Diem</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
 </head>
 
 <body>
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <h1>Carpie Diem</h1>
-        </div>
-    </section>
+    <header>
+            <img src="assets/images/cd_logo.png">
+    </header>
 
-    <header>Todo List</header>
-    <div class="columns">
-        <div class="column">
-            <div class="card">
-                <div class="card-body">
-                    <form>
-                        <input type='text' class='todo-input'>
-                        <button class='todo-button' type='submit'>
-                            <i class='fas fa-plus-square'></i>
-                        </button>
-                        <div class='select'>
-                            <select name='todos' class='filter-todo'>
-                                <option value='all'>All</option>
-                                <option value='completed'>Completed</option>
-                                <option value='to-be-completed'>To be Completed</option>
-                            </select>
-                        </div>
-                    </form>
-                    <div class='todo-container'>
-                        <ul class='todo-list'></ul>
-
+    <div class="tile is-ancestor">
+        <div class="tile is-vertical is-6">
+            <div class="tile is-parent">
+            </div>
+            <div class="tile is-parent is-vertical">
+                <form class="tile is-child">
+                    <input type="text" class="todo-input">
+                    <button class="todo-button" type="submit">
+                        <i class="fas fa-plus-square"></i>
+                    </button>
+                    <div class="select">
+                        <select name="todos" class="filter-todo">
+                            <option value="all">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="to-be-completed">To be Completed</option>
+                        </select>
                     </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="column">
-            <div class="card">
-                <div class="qoute-trivia">
-                    <h2>Trivia</h2>
-
-                    <div id="quote"></div>
-                    <div id="author"></div>
-                </div>
-            </div>
-
-
-
-
-
-            <div class="card">
-                <div class="random-facts">
-
-                    <h2>Random Useless Facts</h2>
-                    <div id="useless-facts"></div>
+                </form>
+                <div class="todo-container">
+                    <ul class="todo-list"></ul>
 
                 </div>
             </div>
         </div>
 
+        <div class="tile is-parent is-vertical is-4">
+            <article class="tile is-child box">
+                <div id="quote"></div>
+                <div id="author"></div>
+            </article>
+
+            <article class="tile is-child box">
+                <div id="trivia"></div>
+            </article>
+        </div>
     </div>
-
-
-
+    </div>
 
     <div class="ocean">
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
-    <div class="weight">
-        <div class="panda">
-            <div class="panda__contain">
-                <div class="panda__ears"></div>
-                <div class="panda__head">
-                    <div class="panda__eyes"></div>
-                    <div class="panda__nose"></div>
-                </div>
-            </div>
-            <div class="panda__arms"></div>
-            <div class="panda__body"></div>
-            <div class="panda__legs"></div>
-        </div>
-    </div>
-    <div class="panda__shadow"></div>
 
 
+    
     <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
         integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+
+
+    
