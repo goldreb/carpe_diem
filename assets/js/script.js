@@ -213,7 +213,7 @@ let triviaAPI= function (){
       .then(function (data) {
         console.log(data);
 
-     document.getElementById('useless-facts').textContent = data.text;
+     document.getElementById('trivia').textContent = data.text;
 
       })
     }
