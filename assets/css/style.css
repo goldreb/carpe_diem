@@ -1,27 +1,48 @@
 
-/* remove basic styling of browser */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html, body { height: 100%; }
+body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  overflow: hidden;
 }
 
-/* pre design just something to work on so it is not boring */
-body {
-background-image: linear-gradient(120deg, #c1f3c9, #7fecec);
-color: white;
-font-family: 'Poppins', sans-serif;
-min-height: 100vh;
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
 }
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+
 
 header {
-    font-size: 3rem;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    
 }
 
 header, form {
 
     margin-top: 40px;
-    padding: 30px;
+    /* padding: 30px; */
     display: flex;
     justify-content: left;
     align-items: center;
@@ -56,6 +77,7 @@ form button:hover {
     justify-content: left;
     align-items: left;
     padding: 30px;
+    font-family: 'Poppins', sans-serif;
     
 }
 
@@ -135,20 +157,49 @@ select {
 
 }
 
-.select::after{
-content: ' \25BC';
-position: absolute;
-background:  #029999;
-top: 0;
-right: 0;
-padding: 1rem;
-pointer-events: none;
-border: none;
-outline: none;
-transition: all 0.3s ease;
-}
 
 .select:hover::after {
     background: white;
     color:  #029999;
+}
+
+/* trivia */
+
+.qoute-trivia {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+   
+    color:rgb(141, 136, 136);
+    align-items: right;
+    margin-bottom: 20vh;
+    margin-top: 0%;
+   
+
+
+}
+
+
+.random-facts {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+ 
+    color:rgb(80, 11, 11)
+}
+
+@keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-25px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
 }
