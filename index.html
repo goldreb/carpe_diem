@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,20 +15,21 @@
 </head>
 
 <body>
+    <!-- logo -->
     <header>
             <img src="assets/images/cd_logo.png">
     </header>
 
+    <!-- Adding items to checklist -->
     <div class="tile is-ancestor">
         <div class="tile is-vertical is-6">
-            <div class="tile is-parent">
-            </div>
             <div class="tile is-parent is-vertical">
                 <form class="tile is-child">
                     <input type="text" class="todo-input">
                     <button class="todo-button" type="submit">
                         <i class="fas fa-plus-square"></i>
                     </button>
+                    <!-- Filtering checklist -->
                     <div class="select">
                         <select name="todos" class="filter-todo">
                             <option value="all">All</option>
@@ -39,40 +38,34 @@
                         </select>
                     </div>
                 </form>
+                <!-- To do list with added items -->
                 <div class="todo-container">
                     <ul class="todo-list"></ul>
 
                 </div>
             </div>
         </div>
-
+        <!-- Inspirational Quote box -->
         <div class="tile is-parent is-vertical is-4">
             <article class="tile is-child box">
                 <div id="quote"></div>
                 <div id="author"></div>
             </article>
 
+            <!-- Fact box -->
             <article class="tile is-child box">
                 <div id="trivia"></div>
             </article>
         </div>
     </div>
     </div>
-
+    <!-- Wave effect at the bottom -->
     <div class="ocean">
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
 
-
-    
     <script src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 </body>
 
 </html>
-
-
-
-    

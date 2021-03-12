@@ -1,51 +1,27 @@
 
 html, body { height: 100%; }
+
 body {
   background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
   overflow: hidden;
 }
 
-.ocean { 
-  height: 5%;
-  width:100%;
-  position:absolute;
-  bottom:0;
-  left:0;
-  background: #015871;
-}
-
-.wave {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
-  position: absolute;
-  top: -198px;
-  width: 6400px;
-  height: 198px;
-  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0);
-}
-
-.wave:nth-of-type(2) {
-  top: -175px;
-  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-  opacity: 1;
-}
-
-
-
 header {
-    font-size: 40px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    
+    margin: 30px;
+    z-index: 20;
 }
 
-header, form {
+img {
+    width: 15%;
+    filter: drop-shadow(2px 2px 1px #029999);
+}
 
-    margin-top: 40px;
-    /* padding: 30px; */
+form {
+    padding: 0 30px;
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: flex-start;
+    z-index: 20;
 
 }
 
@@ -54,8 +30,7 @@ form input, form button {
     font-size: 2rem;
     border: none;
     background: white;
-
-
+    z-index: 20;
 }
 
 form button {
@@ -63,7 +38,7 @@ form button {
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
-
+    z-index: 20;
 }
 
 form button:hover {
@@ -76,31 +51,31 @@ form button:hover {
     display: flex;
     justify-content: left;
     align-items: left;
-    padding: 30px;
+    padding: 20px;
     font-family: 'Poppins', sans-serif;
-    
+    z-index: 20;
 }
 
 .todo-list {
-    min-width: 30%;
+    min-width: 40%;
     list-style: none;
-
+    z-index: 20;
 }
 
 .todo {
-margin: 0.5rem;
-background: white;
-color: black;
-font-size: 1.5rem;
-display: flex;
-justify-content: space-between;
-align-items: left;
-transition: all 0.5s ease;
-
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    transition: all 0.5s ease;
 }
 
 .todo li {
     flex: 1;
+    width: 40%;
 }
 
 .trash-btn, .complete-btn {
@@ -110,7 +85,6 @@ transition: all 0.5s ease;
     padding: 5px;
     cursor: pointer;
     font-size: 1rem;
-
 }
 
 .complete-btn {
@@ -140,7 +114,10 @@ select {
     appearance: none;
     outline: none;
     border: none;
-
+    color: #026868;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
 } 
 
 .select {
@@ -149,41 +126,57 @@ select {
     overflow: hidden;
 }
 
-select {
-    color: #026868;
-    width: 10rem;
-    cursor: pointer;
-    padding: 1rem;
-
-}
-
-
 .select:hover::after {
     background: white;
     color:  #029999;
 }
 
-/* trivia */
-
-.qoute-trivia {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-   
-    color:rgb(141, 136, 136);
-    align-items: right;
-    margin-bottom: 20vh;
-    margin-top: 0%;
-   
-
-
+/* trivia & quote */
+.box {
+    margin: 0 20px;
+    z-index: 20;
 }
 
+#quote, #trivia {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color:rgb(141, 136, 136);
+    padding-bottom: 10px;
+}
 
-.random-facts {
+#author {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
- 
-    color:rgb(80, 11, 11)
+    text-align: right;
+}
+
+/* Wave effect at the bottom */
+.ocean { 
+    height: 5%;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: #015871;
+    z-index: 5;
+}
+  
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+    z-index: 5;
+}
+  
+.wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+    z-index: 5;
 }
 
 @keyframes wave {
@@ -193,13 +186,31 @@ select {
     100% {
       margin-left: -1600px;
     }
-  }
+}
   
-  @keyframes swell {
+@keyframes swell {
     0%, 100% {
       transform: translate3d(0,-25px,0);
     }
     50% {
       transform: translate3d(0,5px,0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    img {
+        width: 50%;
+    }
+
+    .box {
+        z-index: 100;
+    }
+
+    .ocean {
+        visibility: hidden;
+    }
+
+    .waves {
+        visibility: hidden;
     }
 }
