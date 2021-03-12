@@ -33,13 +33,10 @@ body {
 
 
 header {
-    font-size: 40px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    
+    margin: 20px;
 }
 
-header, form {
+form {
 
     margin-top: 40px;
     /* padding: 30px; */
@@ -54,7 +51,6 @@ form input, form button {
     font-size: 2rem;
     border: none;
     background: white;
-
 
 }
 
@@ -82,7 +78,7 @@ form button:hover {
 }
 
 .todo-list {
-    min-width: 30%;
+   min-width: 40%;
     list-style: none;
 
 }
@@ -163,6 +159,24 @@ select {
     color:  #029999;
 }
 
+img {
+    width: 15%;
+    filter: drop-shadow(4px 2px 2px #7fecec);
+}
+
+#quote {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#author {
+    font-size: 16px;
+    text-align: right;
+}
+
+#trivia {
+    font-size: 20px;
+}
 /* trivia */
 
 .qoute-trivia {
