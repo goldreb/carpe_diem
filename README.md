@@ -32,6 +32,9 @@ Quote Garden - https://www.quotegarden.com/
 ## Running instructions
 When using this site, we found that Mozilla Firefox was the best browser. If you are using any other browser, you may have to click on the filter button twice to get the list to update.
 
+## Link to Project
+https://calliebn.github.io/carpe_diem/
+
 ## Authors
 Callie Nipper
 Goldiluck Rebollido
