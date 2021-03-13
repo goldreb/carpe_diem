@@ -36,6 +36,6 @@ When using this site, we found that Mozilla Firefox was the best browser. If you
 https://calliebn.github.io/carpe_diem/
 
 ## Authors
-Callie Nipper
-Goldiluck Rebollido
-Josseline Rendon
+* Callie Nipper
+* Goldiluck Rebollido
+* Josseline Rendon
